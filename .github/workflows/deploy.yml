@@ -67,5 +67,5 @@ jobs:
             docker rm myweb-container || true
 
             echo "Running NEW container..."
-            docker run -d --name mario_level1 -p 80:80 dhankhar9918/mario_level1:satpal
+            docker run -d --name mario_level1 -p 80:8080 dhankhar9918/mario_level1:satpal
           EOF
