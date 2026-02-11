@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/myweb:dheeraj
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mario_level1:satpal
 
   deploy:
     name: Deploy
