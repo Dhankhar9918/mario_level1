@@ -63,8 +63,8 @@ jobs:
             docker pull dhankhar9918/mario_level1:satpal
 
             echo "Stopping and removing old container (if exists)..."
-            docker stop myweb-container || true
-            docker rm myweb-container || true
+            docker stop mario_level1 || true
+            docker rm mario_level1 || true
 
             echo "Running NEW container..."
             docker run -d --name mario_level1 -p 80:8080 dhankhar9918/mario_level1:satpal
