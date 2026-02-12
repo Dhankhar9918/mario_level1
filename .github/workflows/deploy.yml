@@ -67,5 +67,5 @@ jobs:
             docker rm mario_level1 || true
 
             echo "Running NEW container..."
-            docker run -d --name mario_level1 -p 80:8080 dhankhar9918/lavish:satpal
+            docker run -d --name mario_level1 -p 8080:80 dhankhar9918/lavish:satpal
           EOF
