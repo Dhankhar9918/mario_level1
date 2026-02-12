@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mario_level1:satpal
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lavish:satpal
 
   deploy:
     name: Deploy
@@ -60,12 +60,12 @@ jobs:
             docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_PASSWORD }}"
 
             echo "Pulling latest image..."
-            docker pull dhankhar9918/mario_level1:satpal
+            docker pull dhankhar9918/lavish:satpal
 
             echo "Stopping and removing old container (if exists)..."
             docker stop mario_level1 || true
             docker rm mario_level1 || true
 
             echo "Running NEW container..."
-            docker run -d --name mario_level1 -p 80:80 dhankhar9918/mario_level1:satpal
+            docker run -d --name mario_level1 -p 80:80 dhankhar9918/lavish:satpal
           EOF
